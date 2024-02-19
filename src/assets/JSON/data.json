@@ -1,0 +1,73 @@
+[
+    {
+        "name": "LATIA",
+        "price": 15,
+        "stock": 10,
+        "category": "indoor",
+        "img": "../img/PLANT_ONE.jpg"
+    },
+    {
+        "name": "SUCCA",
+        "price": 25,
+        "stock": 8,
+        "category": "outdoor",
+        "img": "../img/PLANT_TWO.jpg"
+    },
+    {
+        "name": "PLAVIA",
+        "price": 20,
+        "stock": 12,
+        "category": "indoor",
+        "img": "../img/PLANT_THREE.jpg"
+    },
+    {
+        "name": "SAVAGIA",
+        "price": 30,
+        "stock": 8,
+        "category": "outdoor",
+        "img": "../img/PLANT_FOUR.jpg"
+    },
+    {
+        "name": "SNAKIS",
+        "price": 18,
+        "stock": 5,
+        "category": "indoor",
+        "img": "../img/PLANT_FIVE.jpg"
+    },
+    {
+        "name": "LAURE",
+        "price": 28,
+        "stock": 8,
+        "category": "indoor",
+        "img": "../img/PLANT_SIX.jpg"
+    },
+    {
+        "name": "MARA",
+        "price": 20,
+        "stock": 20,
+        "category": "indoor",
+        "img": "../img/PLANT_SEVEN.jpg"
+    },
+    {
+        "name": "CIELA",
+        "price": 12,
+        "stock": 2,
+        "category": "outdoor",
+        "img": "../img/PLANT_EIGHT.jpg"
+    },
+    {
+        "name": "TIZIA",
+        "price": 33,
+        "stock": 13,
+        "category": "indoor",
+        "img": "../img/PLANT_NINE.jpg"
+    },
+    {
+        "name": "SUCCULENTA",
+        "price": 12,
+        "stock": 35,
+        "category": "indoor",
+        "img": "../img/PLANT_TEN.jpg"
+    }
+
+]
