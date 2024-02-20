@@ -4,7 +4,7 @@ import data from "../assets/JSON/data.json"
 
 export default function AllCards() {
   return (
-    <div className='w-[80%] h-[100%] bg-white flex justify-center items-center flex-wrap gap-6'>
+    <div className='w-[90%] lg:w-[90%] xl:w-[80%] h-[100%] bg-white flex justify-center items-center flex-wrap gap-6'>
       {/* loope über meine Elemente des Arrays, um mir alle anzeigen zu lassen */}
       {data.map((element, id) => {
               return (

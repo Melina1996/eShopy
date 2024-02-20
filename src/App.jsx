@@ -3,6 +3,8 @@ import AllCards from './components/AllCards'
 
 function App() {
 
+
+
   return (
     <div className='w-screen h-max flex justify-center items-center bg-[white]'>
 

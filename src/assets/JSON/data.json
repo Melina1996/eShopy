@@ -68,6 +68,20 @@
         "stock": 35,
         "category": "indoor",
         "img": "../src/assets/img/PLANT_TEN.jpg"
+    },
+    {
+        "name": "CACTUS",
+        "price": 5,
+        "stock": 3,
+        "category": "indoor",
+        "img": "../src/assets/img/PLANT_ELEVEN.jpg"
+    },
+    {
+        "name": "COLARE",
+        "price": 20,
+        "stock": 3,
+        "category": "indoor",
+        "img": "../src/assets/img/PLANT_TWELVE.jpg"
     }
 
 ]
