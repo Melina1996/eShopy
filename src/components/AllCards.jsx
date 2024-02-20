@@ -8,7 +8,7 @@ export default function AllCards(props) {
       {/* loope über meine Elemente des Arrays, um mir alle anzeigen zu lassen */}
       {props.plants.map((element, id) => {
               return (
-                <Card key={id} id={id} quantity={props.quantity} changeBasket={props.changeBasket} element={element}/>
+                <Card key={id} id={id} quantity={props.quantity} stock={props.stock} changeBasket={props.changeBasket} element={element}/>
               )
               })
           }     

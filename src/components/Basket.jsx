@@ -1,7 +1,7 @@
 import React from 'react'
 import data from "../assets/JSON/data.json"
 
-export default function Basket() {
+export default function Basket(props) {
   return (
     <div className='w-[100%] h-[100%] bg-[white] flex justify-center items-center'>
 
@@ -21,7 +21,7 @@ export default function Basket() {
                     <h1 className='text-sm md:text-xl text-black font-semibold'>{data[0].price}€</h1>
                     <div className='flex justify-start items-center gap-2 pt-2'>
                       <button className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>-</button>
-                      <h1>1</h1>
+                      <h1>{props.quantity[props.id]}</h1>
                       <button className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
 
                     </div>
