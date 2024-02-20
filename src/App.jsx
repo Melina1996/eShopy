@@ -1,11 +1,12 @@
 import { useState } from 'react'
+import Footer from './components/Footer'
 
 
 function App() {
 
   return (
-    <div className='w-screen h-screen'>
-      
+    <div>
+      <Footer></Footer>
     </div>
   )
 }
