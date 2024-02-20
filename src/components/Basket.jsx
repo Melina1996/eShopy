@@ -25,11 +25,11 @@ export default function Basket(props) {
                         <h1 className='text-sm md:text-xl text-black font-semibold'>{element.price*props.quantity[id]}€</h1>
                         <div className='flex justify-start items-center gap-2 pt-2'>
 
-                          <button onClick={()=> {props.reduceItem(id);props.setSum(props.sum - element.price)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>-</button>
+                          <button onClick={()=> {props.reduceItem(id);props.setSum(props.sum - element.price);props.addStock(id)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>-</button>
 
                           <h1>{props.quantity[id]}</h1>
 
-                          <button onClick={()=> {props.addItem(id); props.setSum(props.sum + element.price)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
+                          <button onClick={()=> {props.addItem(id); props.setSum(props.sum + element.price);props.reduceStock(id)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
     
                         </div>
                       </div>

@@ -4,9 +4,6 @@ import Basket from './components/Basket'
 
 function App() {
 
-  // const myArticles = []
-
-  const mySingleArticles = []
 
   const[sum,setSum]=useState(0)
 
@@ -97,12 +94,27 @@ function App() {
   const[stock,setStock] = useState(initialStocks)
 
   //change stock: all the initial stocks are stored in an array which is stored in an useState. Loop through my items and match item's id with index of array 
-  function changeStock(index){
+  function reduceStock(index){
 
     const newStocks= stock.map((c,i)=>{
 
       if (i===index && c >0){
         return c-1
+      } else {
+        return c
+      }
+    })
+
+    setStock(newStocks)
+
+  }
+
+  function addStock(index){
+
+    const newStocks= stock.map((c,i)=>{
+
+      if (i===index){
+        return c+1
       } else {
         return c
       }
@@ -142,16 +154,12 @@ function App() {
 
   }
 
-  function changeBasket(article,id){
-    // myArticles.push(article)
-    changeStock(id)
+  function changeBasket(id){
+
+    reduceStock(id)
+
     addItem(id)
 
-
-    // console.log(mySingleArticles)
-    // console.log(myArticles)
-    // countItems(myArticles)
-    // console.log(amount)
   }
 
 
@@ -159,9 +167,9 @@ function App() {
   return (
     <div className='w-screen h-max flex flex-col justify-center items-center bg-[white]'>
 
-      <AllCards changeBasket={changeBasket} stock={stock} plants={plants} mySingleArticles={mySingleArticles} sum={sum} setSum={setSum} />
+      <AllCards changeBasket={changeBasket} stock={stock} plants={plants}  sum={sum} setSum={setSum} />
       
-      <Basket quantity={quantity} plants={plants} addItem={addItem} reduceItem={reduceItem} sum={sum} setSum={setSum}/>
+      <Basket quantity={quantity} plants={plants} addStock={addStock} reduceStock={reduceStock} addItem={addItem} reduceItem={reduceItem} sum={sum} setSum={setSum}/>
 
     </div>
   )
