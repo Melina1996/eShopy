@@ -4,9 +4,13 @@ export default function Card(props) {
 
   return (
     <div>
-        <div className="w-[150px] h-[200px] md:w-[300px] md:h-[350px] lg:w-[220px] lg:h-[270px]  shadow">
+        <div className="w-[150px] h-[200px] md:w-[300px] md:h-[350px] lg:w-[220px] lg:h-[270px] shadow">
           <div className='w-[100%] h-[70%]'>
-            <img className='w-[100%] h-[100%] object-cover rounded-t-lg' src={props.element.img} alt="Shoes" />
+
+            <div className='w-[100%] h-[100%] image-container'>
+              <img className='w-[100%] h-[100%] object-cover rounded-t-lg my-image' src={props.element.img} alt="Shoes" />
+            </div>
+
             </div>
 
           <div className="flex justify-center w-[100%] h-[30%] bg-white pl-2 pr-2">

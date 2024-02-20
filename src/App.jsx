@@ -4,6 +4,7 @@ import Basket from './components/Basket'
 
 function App() {
 
+  const[money,setMoney]= useState(100)
 
   const[sum,setSum]=useState(0)
 
@@ -128,7 +129,7 @@ function App() {
 
     const newQuantities= quantity.map((c,i)=>{
 
-      if (i===index && stock[i] > 0){
+      if (i===index && stock[i] > 0 && money > 0){
         return c+1
       } else {
         return c
@@ -169,7 +170,7 @@ function App() {
 
       <AllCards changeBasket={changeBasket} stock={stock} plants={plants}  sum={sum} setSum={setSum} />
       
-      <Basket quantity={quantity} plants={plants} stock={stock} addStock={addStock} reduceStock={reduceStock} addItem={addItem} reduceItem={reduceItem} sum={sum} setSum={setSum}/>
+      <Basket quantity={quantity} plants={plants} stock={stock} addStock={addStock} reduceStock={reduceStock} addItem={addItem} reduceItem={reduceItem} sum={sum} setSum={setSum} money={money} setMoney={setMoney}/>
 
     </div>
   )

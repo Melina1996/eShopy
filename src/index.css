@@ -7,3 +7,34 @@ body {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.image-container{
+  overflow: hidden;
+}
+
+.my-image{
+  transition: 0.4 ease-in-out
+}
+
+.my-image:hover{
+  transform: scale(1.07)
+}
+
+
+
+
+
