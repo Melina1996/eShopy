@@ -4,9 +4,15 @@ import Basket from './components/Basket'
 
 function App() {
 
+
+  //MONEY VARIABLE
   const[money,setMoney]= useState(100)
 
+  //TOTAL SUM VARIABLE
+
   const[sum,setSum]=useState(0)
+
+  //ALL MY ARTICLES: useState of array with objects that is passed to components. Only contains properties with whos values don't change
 
   const[plants,setPlants] = useState([
     {
@@ -83,18 +89,20 @@ function App() {
   // }
   ])
 
-  let initialQuantities=[0,0,0,0,0,0,0,0,0,0,0,0]
+  //QUANTITIES: Quantities of my articles change. Create array with value for each of my articles in order to match this value via its index and the ID of my article
 
+  let initialQuantities=[0,0,0,0,0,0,0,0,0,0,0,0]
 
   const[quantity,setQuantity] = useState(initialQuantities)
 
-  ///STOCK
+
+  ///STOCK: Same logic as above
 
   let initialStocks=[5,7,3,10,5,13,1,10,8,12,2,3]
 
   const[stock,setStock] = useState(initialStocks)
 
-  //change stock: all the initial stocks are stored in an array which is stored in an useState. Loop through my items and match item's id with index of array 
+  //CHANGE STOCK: all the initial stocks are stored in an array which is stored in an useState. Loop through my items and match item's id with index of array 
   function reduceStock(index){
 
     const newStocks= stock.map((c,i)=>{
@@ -110,6 +118,7 @@ function App() {
 
   }
 
+  //same logic as above just the other way round
   function addStock(index){
 
     const newStocks= stock.map((c,i)=>{
@@ -125,6 +134,8 @@ function App() {
 
   }
 
+  //CHANGE QUANTITIES:
+  //same logic as above
   function addItem(index){
 
     const newQuantities= quantity.map((c,i)=>{
@@ -140,6 +151,7 @@ function App() {
 
   }
 
+  //same logic as above
   function reduceItem(index){
 
     const newQuantities= quantity.map((c,i)=>{
@@ -155,6 +167,8 @@ function App() {
 
   }
 
+
+  //FUNCTION that is called when ADD artcile to basket: changes quantity and stock of my article
   function changeBasket(id){
 
     reduceStock(id)
@@ -166,7 +180,7 @@ function App() {
 
 
   return (
-    <div className='w-screen h-max flex flex-col justify-center items-center bg-[white]'>
+    <div className='w-screen h-max flex flex-col justify-center items-center bg-[white] font-kumbh'>
 
       <AllCards changeBasket={changeBasket} stock={stock} plants={plants}  sum={sum} setSum={setSum} />
       
