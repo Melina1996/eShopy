@@ -29,7 +29,7 @@ export default function Basket(props) {
 
                           <h1>{props.quantity[id]}</h1>
 
-                          <button onClick={()=> {props.addItem(id); props.setSum(props.sum + element.price);props.reduceStock(id)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
+                          <button onClick={()=> {props.addItem(id); props.stock[id] > 0 ? props.setSum(props.sum + element.price) : "";props.reduceStock(id)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
     
                         </div>
                       </div>

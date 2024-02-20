@@ -128,7 +128,7 @@ function App() {
 
     const newQuantities= quantity.map((c,i)=>{
 
-      if (i===index){
+      if (i===index && stock[i] > 0){
         return c+1
       } else {
         return c
@@ -169,7 +169,7 @@ function App() {
 
       <AllCards changeBasket={changeBasket} stock={stock} plants={plants}  sum={sum} setSum={setSum} />
       
-      <Basket quantity={quantity} plants={plants} addStock={addStock} reduceStock={reduceStock} addItem={addItem} reduceItem={reduceItem} sum={sum} setSum={setSum}/>
+      <Basket quantity={quantity} plants={plants} stock={stock} addStock={addStock} reduceStock={reduceStock} addItem={addItem} reduceItem={reduceItem} sum={sum} setSum={setSum}/>
 
     </div>
   )
