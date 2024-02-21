@@ -6,6 +6,7 @@ body {
   margin: 0;
 }
 
+/* glow-effect */
 .my-title:hover{
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
   transition: 0.2s ease
@@ -13,6 +14,7 @@ body {
 
 .jungleImage {
   background-image: url('assets/img/BANNER.jpg');
+  background-attachment: fixed;
 }
 
 .image-container{
@@ -23,6 +25,7 @@ body {
   transition: 0.4 ease-in-out
 }
 
+/* change picture size in its container */
 .my-image:hover{
   transform: scale(1.07)
 }

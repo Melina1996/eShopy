@@ -23,8 +23,8 @@ export default function Header(props) {
         </div>      
 
       </div>
-      <div className='my-title flex justify-center items-center h-[40dvh] lg:text-[80px] md:text-[40px] text-white text-[20px] font-semibold'>
-        JOIN THE JUNGLE <span className='lg:text-[30px] mb-14'>&#169;</span>
+      <div className='my-title flex justify-center items-center h-[40dvh] lg:text-[80px] md:text-[40px] text-white text-[30px] font-semibold'>
+        JOIN THE JUNGLE <span className='lg:text-[30px] md:text-[20px] md:mb-8 lg:mb-14 text-[15px] mb-6'>&#169;</span>
       </div>
     </div>
   )

@@ -4,7 +4,7 @@ export default function Card(props) {
 
   return (
     <div>
-        <div className="w-[150px] h-[200px] md:w-[300px] md:h-[350px] lg:w-[270px] lg:h-[320px] xl:w-[300px] xl:h-[350px] shadow">
+        <div className="w-[170px] h-[200px] md:w-[300px] md:h-[350px] lg:w-[270px] lg:h-[320px] xl:w-[300px] xl:h-[350px] shadow">
           <div className='w-[100%] h-[70%]'>
 
             <div className='w-[100%] h-[100%] image-container'>

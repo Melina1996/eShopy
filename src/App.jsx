@@ -3,6 +3,7 @@ import AllCards from './components/AllCards'
 import Basket from './components/Basket'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ScrollBtn from './components/ScrollBtn'
 
 
 function App() {
@@ -141,31 +142,6 @@ function App() {
 
   }
 
-  //SCROLL BTN
-
-  
-    const [visible, setVisible] = useState(false) 
-    
-    const toggleVisible = () => { 
-      const scrolled = document.documentElement.scrollTop; 
-      if (scrolled > 300){ 
-        setVisible(true) 
-      }  
-      else if (scrolled <= 300){ 
-        setVisible(false) 
-      } 
-    }; 
-    
-    const scrollToTop = () =>{ 
-      window.scrollTo({ 
-        top: 0,  
-        behavior: 'smooth'
-        /* you can also use 'auto' behaviour 
-           in place of 'smooth' */
-      }); 
-    }; 
-    
-    window.addEventListener('scroll', toggleVisible); 
 
 
 
@@ -174,24 +150,13 @@ function App() {
 
    
 
-
       <Header setStatusBtn={setStatusBtn} sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} restorestock={restorestock} addStock={addStock} quantity={quantity} deleteQuantity={deleteQuantity} stock={stock} changeBasket={changeBasket} money={money} setMoney={setMoney} reduceStock={reduceStock}/>
 
       <AllCards sum={sum} setSum={setSum} quantity={quantity} stock={stock} changeBasket={changeBasket} money={money} setMoney={setMoney}/>
 
-      {/* <Footer /> */}
+      <Footer />
 
-      {/* {statusBtn ? 
-
-      <Basket className="absolute top-0 right-0" sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} restorestock={restorestock} addStock={addStock} quantity={quantity} deleteQuantity={deleteQuantity} stock={stock} changeBasket={changeBasket} money={money} setMoney={setMoney} reduceStock={reduceStock}/>
-
-      : 
-      ""
-
-      } */}
-
-    <button className='absolute right-0' onClick={scrollToTop}  
-     style={{display: visible ? 'inline' : 'none'}}>TOP</button>
+      <ScrollBtn />
 
       
     </div>
