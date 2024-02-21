@@ -3,12 +3,12 @@ import data from "../assets/JSON/data.json"
 
 export default function Basket(props) {
   return (
-    <div className='w-[100%] h-[100%] bg-[white] flex justify-center items-center'>
+    <div className='h-[100%] bg-[white] flex justify-center items-center'>
 
-      <div className='w-[90%] h-[100%] pt-4 pl-4 flex flex-col justify-start'>
+      <div className='h-[100%] pt-4 pl-4 flex flex-col justify-start gap-10'>
 
 
-          {props.plants.map((element, id) => {
+          {data.map((element, id) => {
               return (
 
                 <div key={id} className={`${props.quantity[id] > 0 ? "flex" : "hidden"} w-[350px] h-[150px] md:w-[450px] md:h-[200px] lg:w-[550px] lg:h-[250px] justify-center items-center`}>
@@ -48,12 +48,6 @@ export default function Basket(props) {
             <h1>{props.money <= 0 ? `NOT ENOUGH MONEY` : `MONEY: ${props.money}`}</h1>
           </div>
       
-      </div>
-
-      <div className='w-[10%] h-[100%] flex justify-end items-start pr-4 pt-4'>
-
-        <p>X</p>
-
       </div>
 
 

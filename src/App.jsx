@@ -7,6 +7,9 @@ import Footer from './components/Footer'
 
 function App() {
 
+  //BTN Basket
+
+  const[statusBtn,setStatusBtn]=useState(false)
 
   //MONEY VARIABLE
   const[money,setMoney]= useState(100)
@@ -14,83 +17,6 @@ function App() {
   //TOTAL SUM VARIABLE
 
   const[sum,setSum]=useState(0)
-
-  //ALL MY ARTICLES: useState of array with objects that is passed to components. Only contains properties with whos values don't change
-
-  const[plants,setPlants] = useState([
-    {
-        "name": "LATIA",
-        "price": 15,
-        "category": "indoor",
-        "img": "../src/assets/img/PLANT_ONE.jpg",
-    },
-    {
-        "name": "SUCCA",
-        "price": 25,
-        "category": "outdoor",
-        "img": "../src/assets/img/PLANT_TWO.jpg",
-    },
-    {
-      "name": "PLAVIA",
-      "price": 20,
-      "category": "indoor",
-      "img": "../src/assets/img/PLANT_THREE.jpg"
-  },
-  // {
-  //     "name": "SAVAGIA",
-  //     "price": 30,
-  //     "category": "outdoor",
-  //     "img": "../src/assets/img/PLANT_FOUR.jpg"
-  // },
-  // {
-  //     "name": "SNAKIS",
-  //     "price": 18,
-  //     "category": "indoor",
-  //     "img": "../src/assets/img/PLANT_FIVE.jpg"
-  // },
-  // {
-  //     "name": "LAURE",
-  //     "price": 28,
-  //     "category": "indoor",
-  //     "img": "../src/assets/img/PLANT_SIX.jpg"
-  // },
-  // {
-  //     "name": "MARA",
-  //     "price": 20,
-  //     "category": "indoor",
-  //     "img": "../src/assets/img/PLANT_SEVEN.jpg"
-  // },
-  // {
-  //     "name": "CIELA",
-  //     "price": 12,
-  //     "category": "outdoor",
-  //     "img": "../src/assets/img/PLANT_EIGHT.jpg"
-  // },
-  // {
-  //     "name": "TIZIA",
-  //     "price": 33,
-  //     "category": "indoor",
-  //     "img": "../src/assets/img/PLANT_NINE.jpg"
-  // },
-  // {
-  //     "name": "SUCCULENTA",
-  //     "price": 12,
-  //     "category": "indoor",
-  //     "img": "../src/assets/img/PLANT_TEN.jpg"
-  // },
-  // {
-  //     "name": "CACTUS",
-  //     "price": 5,
-  //     "category": "indoor",
-  //     "img": "../src/assets/img/PLANT_ELEVEN.jpg"
-  // },
-  // {
-  //     "name": "COLARE",
-  //     "price": 20,
-  //     "category": "indoor",
-  //     "img": "../src/assets/img/PLANT_TWELVE.jpg"
-  // }
-  ])
 
   //QUANTITIES: Quantities of my articles change. Create array with value for each of my articles in order to match this value via its index and the ID of my article
 
@@ -215,18 +141,58 @@ function App() {
 
   }
 
+  //SCROLL BTN
+
+  
+    const [visible, setVisible] = useState(false) 
+    
+    const toggleVisible = () => { 
+      const scrolled = document.documentElement.scrollTop; 
+      if (scrolled > 300){ 
+        setVisible(true) 
+      }  
+      else if (scrolled <= 300){ 
+        setVisible(false) 
+      } 
+    }; 
+    
+    const scrollToTop = () =>{ 
+      window.scrollTo({ 
+        top: 0,  
+        behavior: 'smooth'
+        /* you can also use 'auto' behaviour 
+           in place of 'smooth' */
+      }); 
+    }; 
+    
+    window.addEventListener('scroll', toggleVisible); 
+
 
 
   return (
-    <div className=''>
+    <div className='font-kumbh relative'>
 
-      <Header />
+   
 
-      <AllCards sum={sum} setSum={setSum} quantity={quantity} stock={stock} changeBasket={changeBasket} plants={plants} money={money} setMoney={setMoney}/>
+
+      <Header setStatusBtn={setStatusBtn} sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} restorestock={restorestock} addStock={addStock} quantity={quantity} deleteQuantity={deleteQuantity} stock={stock} changeBasket={changeBasket} money={money} setMoney={setMoney} reduceStock={reduceStock}/>
+
+      <AllCards sum={sum} setSum={setSum} quantity={quantity} stock={stock} changeBasket={changeBasket} money={money} setMoney={setMoney}/>
 
       {/* <Footer /> */}
 
-      <Basket sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} restorestock={restorestock} addStock={addStock} quantity={quantity} deleteQuantity={deleteQuantity} stock={stock} changeBasket={changeBasket} plants={plants} money={money} setMoney={setMoney} reduceStock={reduceStock}/>
+      {/* {statusBtn ? 
+
+      <Basket className="absolute top-0 right-0" sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} restorestock={restorestock} addStock={addStock} quantity={quantity} deleteQuantity={deleteQuantity} stock={stock} changeBasket={changeBasket} money={money} setMoney={setMoney} reduceStock={reduceStock}/>
+
+      : 
+      ""
+
+      } */}
+
+    <button className='absolute right-0' onClick={scrollToTop}  
+     style={{display: visible ? 'inline' : 'none'}}>TOP</button>
+
       
     </div>
   )
