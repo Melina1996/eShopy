@@ -10,7 +10,7 @@ export default function AllCards(props) {
 
         // loop over my array with objects and create card for each of them and pass on it's ID
               return (
-                <Card key={id} id={id} sum={props.sum} setSum={props.setSum} click={props.click} quantity={props.quantity} stock={props.stock} changeBasket={props.changeBasket} element={element}/>
+                <Card key={id} id={id} money={props.money} setMoney={props.setMoney} sum={props.sum} setSum={props.setSum} click={props.click} quantity={props.quantity} stock={props.stock} changeBasket={props.changeBasket} element={element}/>
               )
               })
           }     

@@ -110,7 +110,7 @@ function App() {
 
     const newStocks= stock.map((c,i)=>{
 
-      if (i===index && c >0){
+      if (i===index && c > 0){
         return c-1
       } else {
         return c
@@ -143,7 +143,7 @@ function App() {
 
     const newQuantities= quantity.map((c,i)=>{
 
-      if (i===index && stock[i] > 0 && money > 0){
+      if (i===index && stock[i] > 0){
         return c+1
       } else {
         return c
@@ -170,6 +170,41 @@ function App() {
 
   }
 
+  //FUNCTION DELETE
+  function deleteQuantity(index){
+
+    const newQuantities= quantity.map((c,i)=>{
+      
+      if (i===index){
+        c=0
+        return c
+      } else {
+        return c
+      }
+    })
+
+    setQuantity(newQuantities)
+
+  }
+
+  //FUNCTION STOCK
+
+  function restorestock(index){
+
+    const newStock= stock.map((c,i)=>{
+      
+      if (i===index){
+        c+=quantity[index]
+        return c
+      } else {
+        return c
+      }
+    })
+
+    setStock(newStock)
+
+
+  }
 
   //FUNCTION that is called when ADD artcile to basket: changes quantity and stock of my article
   function changeBasket(id){
@@ -187,11 +222,11 @@ function App() {
 
       <Header />
 
-      <AllCards sum={sum} setSum={setSum} quantity={quantity} stock={stock} changeBasket={changeBasket} plants={plants}/>
+      <AllCards sum={sum} setSum={setSum} quantity={quantity} stock={stock} changeBasket={changeBasket} plants={plants} money={money} setMoney={setMoney}/>
 
-      <Footer sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} quantity={quantity} stock={stock} changeBasket={changeBasket} plants={plants}/>
+      {/* <Footer /> */}
 
-      <Basket />
+      <Basket sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} restorestock={restorestock} addStock={addStock} quantity={quantity} deleteQuantity={deleteQuantity} stock={stock} changeBasket={changeBasket} plants={plants} money={money} setMoney={setMoney} reduceStock={reduceStock}/>
       
     </div>
   )

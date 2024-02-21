@@ -24,10 +24,11 @@ export default function Card(props) {
             <div className="w-[50%] h-[100%] flex flex-col justify-end items-end md:pb-2 pb-1 md:gap-2 gap-1">
               
               {/* call function to change quantity and stock with Card's ID */}
-              <button onClick={()=> {props.changeBasket(props.id),props.setSum(props.sum + props.element.price)}} className="h-[30px] shadow rounded w-[40px] md:w-[80px] tracking-widest bg-black hover:bg-[#214E1Fff] text-white text-sm md:text-md flex justify-center items-center">ADD</button>
+              <button onClick={()=> {props.changeBasket(props.id),props.setSum(props.sum + props.element.price),props.setMoney(props.money-props.element.price)}} className={`${(props.money >= props.element.price) ? "flex" : "hidden"} h-[30px] shadow rounded w-[40px] md:w-[80px] tracking-widest bg-black hover:bg-[#214E1Fff] text-white text-sm md:text-md justify-center items-center`}>ADD</button>
 
               {/* depending on amount of stock change color of text */}
               <p className={`md:text-[12px] text-[10px] ${props.stock[props.id] <= 1 ? "text-[#FF0000]" : "text-[#808080]"}`}>{`${props.stock[props.id]>0 ? `STOCK:${props.stock[props.id]}` : "OUT OF STOCK"}`}</p>
+              <p>{props.quantity[props.id]}</p>
 
             </div>
 

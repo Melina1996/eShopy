@@ -25,11 +25,13 @@ export default function Basket(props) {
                         <h1 className='text-sm md:text-xl text-black font-semibold'>{element.price*props.quantity[id]}€</h1>
                         <div className='flex justify-start items-center gap-2 pt-2'>
 
-                          <button onClick={()=> {props.reduceItem(id);props.setSum(props.sum - element.price);props.addStock(id); props.setMoney(props.money-props.sum)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>-</button>
+                          <button onClick={()=> {props.reduceItem(id);props.setSum(props.sum - element.price);props.addStock(id); props.setMoney(props.money+element.price)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>-</button>
 
                           <h1>{props.quantity[id]}</h1>
 
-                          <button onClick={()=> {props.addItem(id); props.stock[id] > 0 ? props.setSum(props.sum + element.price) : "";props.reduceStock(id); props.setMoney(props.money-props.sum)}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
+                          <button onClick={()=> {props.money >= element.price ? props.addItem(id) : ""; props.money >= element.price ? props.setSum(props.sum + element.price) : "";props.money >= element.price ?  props.reduceStock(id) : ""; props.stock[id] > 0 , props.money >= element.price ? props.setMoney(props.money-element.price): ""}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
+                          
+                          <button onClick={()=> {props.setMoney(props.money+(props.quantity[id]*element.price)), props.setSum(props.sum-(props.quantity[id]*element.price)),props.restorestock(id),props.deleteQuantity(id)}}>DELETE</button>
     
                         </div>
                       </div>
@@ -43,7 +45,7 @@ export default function Basket(props) {
           <div>
             <h1>TOTAL: {props.sum}</h1>
             {/* if not enough money to keep buying: message appears */}
-            <h1>{props.money < 0 ? `NOT ENOUGH MONEY` : `MONEY: ${props.money}`}</h1>
+            <h1>{props.money <= 0 ? `NOT ENOUGH MONEY` : `MONEY: ${props.money}`}</h1>
           </div>
       
       </div>
