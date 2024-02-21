@@ -2,13 +2,18 @@ import React from 'react'
 
 export default function Card(props) {
 
+  const imagePath = new URL(
+    `../assets/img/${props.images}`,
+    import.meta.url
+  ).href;
+
   return (
     <div>
         <div className="w-[170px] h-[200px] md:w-[300px] md:h-[350px] lg:w-[270px] lg:h-[320px] xl:w-[300px] xl:h-[350px] shadow">
           <div className='w-[100%] h-[70%]'>
 
             <div className='w-[100%] h-[100%] image-container'>
-              <img className='w-[100%] h-[100%] object-cover rounded-t-lg my-image' src={props.element.img} alt="Shoes" />
+              <img className='w-[100%] h-[100%] object-cover rounded-t-lg my-image' src={imagePath} alt="Shoes" />
             </div>
 
             </div>

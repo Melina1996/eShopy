@@ -1,4 +1,9 @@
 import React from 'react'
+import PHONE from "../assets/img/PHONE.png"
+import MAIL from "../assets/img/MAIL.png"
+import INSTAGRAM from "../assets/img/Instagram.png"
+import FB from "../assets/img/Facebook.png"
+import Twitter from "../assets/img/Twitter.png"
 
 export default function Footer() {
   return (
@@ -31,7 +36,7 @@ export default function Footer() {
 
             <div className='flex gap-2'>
 
-              <img className='w-[25px] h-[25px]' src="./src/assets/img/PHONE.png" alt="" />
+              <img className='w-[25px] h-[25px]' src={PHONE} alt="" />
 
               <p>+18085731130</p>
 
@@ -39,7 +44,7 @@ export default function Footer() {
 
             <div className='flex gap-2'>
 
-              <img className='w-[25px] h-[25px]' src="./src/assets/img/MAIL.png" alt="" />
+              <img className='w-[25px] h-[25px]' src={MAIL} alt="" />
 
               <p>aloha@gmail.com</p>
 
@@ -55,9 +60,9 @@ export default function Footer() {
 
       <div className='h-[20dvh] bg-[#1E1E1E] flex justify-center items-center'>
         <div className='flex gap-20'>
-          <div className='bg-[#16341A] hover:bg-black rounded-full h-[50px] w-[50px] flex justify-center items-center'><img className='h-[30px]' src="./src/assets/img/Facebook.png" alt="" /></div>
-          <div className='bg-[#16341A]  hover:bg-black rounded-full h-[50px] w-[50px] flex justify-center items-center'><img className='h-[30px]' src="./src/assets/img/Twitter.png" alt="" /></div>
-          <div className='bg-[#16341A]  hover:bg-black rounded-full h-[50px] w-[50px] flex justify-center items-center'><img className='h-[30px]' src="./src/assets/img/Instagram.png" alt="" /></div>
+          <div className='bg-[#16341A] hover:bg-black rounded-full h-[50px] w-[50px] flex justify-center items-center'><img className='h-[30px]' src={FB} alt="" /></div>
+          <div className='bg-[#16341A]  hover:bg-black rounded-full h-[50px] w-[50px] flex justify-center items-center'><img className='h-[30px]' src={Twitter} alt="" /></div>
+          <div className='bg-[#16341A]  hover:bg-black rounded-full h-[50px] w-[50px] flex justify-center items-center'><img className='h-[30px]' src={INSTAGRAM} alt="" /></div>
         </div>
       </div>
 
