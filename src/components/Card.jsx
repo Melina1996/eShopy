@@ -28,7 +28,6 @@ export default function Card(props) {
 
               {/* depending on amount of stock change color of text */}
               <p className={`md:text-[12px] text-[10px] ${props.stock[props.id] <= 1 ? "text-[#FF0000]" : "text-[#808080]"}`}>{`${props.stock[props.id]>0 ? `STOCK:${props.stock[props.id]}` : "OUT OF STOCK"}`}</p>
-              <p>{props.quantity[props.id]}</p>
 
             </div>
 
