@@ -183,6 +183,9 @@ function App() {
 
   return (
     <div >
+
+      <Header />
+      <AllCards />
       
     </div>
   )
