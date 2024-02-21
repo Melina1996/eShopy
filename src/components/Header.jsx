@@ -12,7 +12,7 @@ export default function Header(props) {
         <div className="drawer drawer-end justify-end pr-4">
           <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
-            <label htmlFor="my-drawer-4" className="drawer-button btn bg-black hover:bg-[#808080] rounded-xl border-none pt-4  pb-4 btn-primary"><img className='w-[20px] h-[20px]' src="../src/assets/img/BASKET_ICON.png" alt="" /></label>
+            <label htmlFor="my-drawer-4" className="drawer-button btn bg-black hover:bg-[#808080] rounded-xl border-none pt-4  pb-4 btn-primary"><img className='w-[20px] h-[20px]' src="./src/assets/img/BASKET_ICON.png" alt="" /></label>
           </div> 
           <div className="drawer-side">
             <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>

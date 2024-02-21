@@ -33,7 +33,7 @@ export default function Basket(props) {
 
                           <button onClick={()=> {props.money >= element.price ? props.addItem(id) : ""; props.money >= element.price ? props.setSum(props.sum + element.price) : "";props.money >= element.price ?  props.reduceStock(id) : ""; props.stock[id] > 0 , props.money >= element.price ? props.setMoney(props.money-element.price): ""}} className='w-[10px] h-[10px] p-4 rounded-full flex justify-center items-center bg-[black] hover:bg-[#214E1Fff] text-white'>+</button>
                           
-                          <button onClick={()=> {props.setMoney(props.money+(props.quantity[id]*element.price)), props.setSum(props.sum-(props.quantity[id]*element.price)),props.restorestock(id),props.deleteQuantity(id)}}><img className='w-[25px] h-[25px]' src="../src/assets/img/BIN.png" alt="" /></button>
+                          <button onClick={()=> {props.setMoney(props.money+(props.quantity[id]*element.price)), props.setSum(props.sum-(props.quantity[id]*element.price)),props.restorestock(id),props.deleteQuantity(id)}}><img className='w-[25px] h-[25px]' src="./src/assets/img/BIN.png" alt="" /></button>
     
                         </div>
                       </div>
