@@ -6,6 +6,11 @@ body {
   margin: 0;
 }
 
+.jungleImage {
+  background-image: url('assets/img/BANNER.jpg');
+}
+
+
 
 
 
@@ -39,6 +44,3 @@ body {
 
 
 
-.jungleImage {
-  background-image: url('assets/img/BANNER.jpg');
-}

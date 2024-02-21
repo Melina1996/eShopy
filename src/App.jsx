@@ -2,6 +2,7 @@ import { useState } from 'react'
 import AllCards from './components/AllCards'
 import Basket from './components/Basket'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -183,9 +184,6 @@ function App() {
 
   return (
     <div >
-
-      <Header />
-      <AllCards />
       
     </div>
   )
