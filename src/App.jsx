@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import AllCards from './components/AllCards'
 import Basket from './components/Basket'
+import Header from './components/Header'
+
 
 function App() {
 
@@ -180,12 +182,8 @@ function App() {
 
 
   return (
-    <div className='w-screen h-max flex flex-col justify-center items-center bg-[white] font-kumbh'>
-
-      <AllCards changeBasket={changeBasket} stock={stock} plants={plants}  sum={sum} setSum={setSum} />
+    <div >
       
-      <Basket quantity={quantity} plants={plants} stock={stock} addStock={addStock} reduceStock={reduceStock} addItem={addItem} reduceItem={reduceItem} sum={sum} setSum={setSum} money={money} setMoney={setMoney}/>
-
     </div>
   )
 }
