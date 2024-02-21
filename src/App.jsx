@@ -183,7 +183,15 @@ function App() {
 
 
   return (
-    <div >
+    <div className=''>
+
+      <Header />
+
+      <AllCards sum={sum} setSum={setSum} quantity={quantity} stock={stock} changeBasket={changeBasket} plants={plants}/>
+
+      <Footer sum={sum} setSum={setSum} reduceItem={reduceItem} addItem={addItem} quantity={quantity} stock={stock} changeBasket={changeBasket} plants={plants}/>
+
+      <Basket />
       
     </div>
   )

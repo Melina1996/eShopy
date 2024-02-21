@@ -9,7 +9,7 @@ export default function Header() {
         <div className='hover:cursor-pointer text-[15px] md:text-[25px] lg:text-[30px]'>ABOUT</div>
         <img className='h-[25px] md:h-[30px] lg:h-[35px] border-white border-[2px] rounded-full p-[5px] hover:cursor-pointer' src={BasketIcon} alt="" />
       </div>
-      <div className='flex justify-center items-center h-[40dvh] lg:text-[100px] md:text-[40px] text-white text-[20px]'>
+      <div className='my-title flex justify-center items-center h-[40dvh] lg:text-[100px] md:text-[40px] text-white text-[20px]'>
         JOIN THE JUNGLE
       </div>
     </div>
