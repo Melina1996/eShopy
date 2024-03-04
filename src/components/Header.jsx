@@ -4,7 +4,7 @@ import Basket from "./Basket";
 
 export default function Header(props) {
   return (
-    <div className="h-[50dvh] w-screen jungleImage bg-center bg-cover">
+    <div className="h-[50dvh] w-full jungleImage bg-center bg-cover">
       <div className="h-[10dvh] flex justify-end gap-5 items-center text-white pl-[20px] text-[25px] backdrop-blur-sm	">
         <div className="hover:cursor-pointer hover:text-[#808080] hover:font-semibold  text-[15px] md:text-[18px] lg:text-[20px]">
           HOME

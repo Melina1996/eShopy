@@ -145,7 +145,7 @@ function App() {
 
 
   return (
-    <div className='font-kumbh relative'>
+    <div className='font-kumbh relative '>
 
    
 
